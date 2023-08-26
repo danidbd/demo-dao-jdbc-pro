@@ -10,19 +10,29 @@ public class Seller implements Serializable {
     private  String email;
     private Date birthDate;
     private double baseSalary;
+    private Department department;
 
     //Constructors
-    public Seller(Integer id, String name, String email, Date birthDate, double baseSalary) {
+    public Seller(Integer id, String name, String email, Date birthDate, double baseSalary, Department department) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.birthDate = birthDate;
         this.baseSalary = baseSalary;
+        this.department = department;
     }
 
     // Getters/Setters
     public Integer getId() {
         return id;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
     public void setId(Integer id) {
@@ -92,6 +102,7 @@ public class Seller implements Serializable {
                 ", email='" + email + '\'' +
                 ", birthDate=" + birthDate +
                 ", baseSalary=" + baseSalary +
+                ", department=" + department +
                 '}';
     }
 }
