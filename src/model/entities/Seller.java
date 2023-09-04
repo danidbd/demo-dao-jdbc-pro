@@ -2,7 +2,6 @@ package model.entities;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Objects;
 
 public class Seller implements Serializable {
     private  Integer id;
@@ -13,7 +12,7 @@ public class Seller implements Serializable {
     private Department department;
 
     //Constructors
-    public Seller(Integer id, String name, String email, Date birthDate, double baseSalary, Department department) {
+    public Seller() {
         this.id = id;
         this.name = name;
         this.email = email;
